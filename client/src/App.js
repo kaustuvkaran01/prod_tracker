@@ -1,10 +1,10 @@
-import React from 'react';
+import React from 'react'; 
 import './App.css';
-import { Switch, Route } from 'react-router-dom';
-import Home from './components/Home/index';
-import Workout from './components/Workout/index';
-import Help from './components/Help/index';
-import News from './components/News/index';
+import { Switch, Route } from 'react-router-dom'; 
+import Home from './components/Home/index';     
+import Workout from './components/Workout/index'; 
+import Help from './components/Help/index'; 
+import News from './components/News/index'; 
 // import NavbarComponent from './components/Navbar/index';
 
 function App() {
