@@ -1,33 +1,39 @@
 import React from 'react';
 import styled from 'styled-components';
-import {NavLink} from 'react-router-dom';
-function WorkoutCard(props) {
-  return (
-    <WorkoutCardContainer>
-      <NavLink to={props.to}>
-        <p>{props.content}</p>
-      </NavLink>
-    </WorkoutCardContainer>
-  );
+function WOCards(props){
+    return(
+        <WorkoutCardContainer>
+            <img src = {props.logo}/>
+            <p> {props.title}</p>
+            <p> {props.text}</p>
+        </WorkoutCardContainer>
+    );
 }
-export default WorkoutCard;
 
+export default WOCards;
 const WorkoutCardContainer = styled.div`
-    height: 15rem;
-    width: 25rem;
-    background: black;
+
+height:20rem;
+width: 15rem;
+border-radius: 24px;
+background: white;
+padding: 1.5rem;
+margin:2rem;
+background: #0e1111;
+text-align:center;
+img{
+    height: 60%;
+    border-radius:50%;
+    border: 10px solid #A521DA;
+}
+p{
+    font-size:x-large;
     color:white;
-    border-radius:24px;
-    padding: 2rem 1rem 2rem 1rem;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-    margin: 0 2rem 0 2rem;
-    p{
-        opacity:0.7;
-        font-weight:400;
-        color: #a521da;
-        text-decoration:none;
-        font-size: 5rem;
-    }
+}
+button{
+    background:transparent;
+    border:transparent;
+    color:white;
+}
+
 `;
