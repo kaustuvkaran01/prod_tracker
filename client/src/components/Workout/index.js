@@ -1,7 +1,7 @@
 import React from 'react';
 import NavbarComponent from '../Navbar/index';
 import styled from 'styled-components';
-import './index.css'
+// import './styles.css'
 import WorkoutCard from './WorkoutCard';
 import { AnimateSharedLayout } from "framer-motion"
 import icon1 from '../../images/sleep.webp';
@@ -12,7 +12,6 @@ export default function Workout() {
       <div>
         <NavbarComponent />
       </div>
-      
       <div style = {{paddingTop:"2em",height:"5vh",width:"5vw"}}>
         {/* <WorkoutPage/> */}
       </div>

@@ -12,7 +12,8 @@ function Cards(props) {
       <p className="sub-head">Today</p></p>
       </div>
       <div className="right">
-        <p className="heading">count</p>
+        <button className="counter-btn"><IoIosArrowUp /></button>
+        <button className="counter-btn"><IoIosArrowDown /></button>
       </div>
     </CardContainer>
   );
@@ -28,11 +29,18 @@ const CardContainer = styled.div`
     background: var(--light-blue);
     border-radius: 6px;
     display:flex;
+    align-items:center;
+    justify-content:center;
     .left{
       height:90%;
     }
     .right{
+      display:flex;
       height:90%;
+      align-items:center;
+      justify-content:center;
+      gap:12px;
+      // border: 2px solid black;
     }
     .heading{
       font-weight:600;
@@ -41,6 +49,14 @@ const CardContainer = styled.div`
     .sub-head{
       font-weight:400;
       font-size:small;
+    }
+    .counter-btn{
+      border-radius:50%;
+      border:2px solid var(--main-dark);
+      background: var(--light-blue);
+      display:flex;
+      align-items:center;
+      padding:0.5rem;
     }
 
 `;

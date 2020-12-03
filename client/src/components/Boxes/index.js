@@ -2,10 +2,9 @@ import React,{ Component } from 'react';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
-class Boxes extends Component {
-  render(){
-      return (
-        <motion.div
+export default function Boxes({ heading,subheading}) {
+  return (
+    <motion.div
           whileHover={{
             scale: 1.1,
             textShadow: "0px 0px 8px rgb(255,255,255)",
@@ -13,18 +12,16 @@ class Boxes extends Component {
           }}
         >
           <BoxContainer>
-            <div style={{ width: "7.5rem" }}>
               <p className="heading">
-                Heading
-                <p className="sub-head">Subheading Subheading</p>
+                {heading}
+                <p className="sub-head">{subheading} </p>
               </p>
-            </div>
-            <button className="details-btn">Details</button>
+            <img src={require('../../images/react-svg.svg')} />
           </BoxContainer>
         </motion.div>
-      );}
+  );
 }
-export default Boxes;
+
 
 const BoxContainer = styled.div`
 
@@ -32,12 +29,14 @@ const BoxContainer = styled.div`
     background:black;
     flex-direction:row;
     color:white;
-    min-width:45%;
+    width:17rem;
     gap:24px;
+    padding:12px;
     font-family:'Poppins';
     font-size:small;
     background:white;
-    border-radius:6px;
+    border-radius:12px;
+    border: 3px solid var(--border-yellow);
     color:var(--main-dark);
     justify-content:center;
     align-items:center;
@@ -49,19 +48,14 @@ const BoxContainer = styled.div`
         font-size:small;
         font-weight:400;
     }
-    &:hover{
-        border:1px solid var(--border-yellow);
-        background:var(--light-blue);
-        .details-btn{
-            background:var(--dark-blue);
-            color: white;
-        }
-    }
     .details-btn{
         background:white;
         border:2px solid var(--main-dark);
         border-radius:6px;
         font-weight: 600;
         height:60%;
+    }
+    img{
+      height:4rem;
     }
 `;

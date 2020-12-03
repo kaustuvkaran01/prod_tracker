@@ -25,10 +25,11 @@ const RightContainer = styled.div`
     gap:24px;
     min-width:50%;
     height:80vh;
-    background:var(--border-yellow);
+    background:white;
     justify-content:center;
     align-content:center;
     text-align:center;
+    border-radius: 24px;
     .prod-logo{
         margin:0.5rem;
         align-self:center;

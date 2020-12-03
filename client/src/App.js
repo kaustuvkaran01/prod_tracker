@@ -9,11 +9,12 @@ import ErrorPage from './components/Error/index';
 import Navbar from './components/Navbar/index';
 import Signin from './components/Signin/index';
 import Signup from './components/Signup/index';
+import history from './services/history';
 
 class App extends Component {
   render() {
     return (
-      <Router>
+      <Router history={history}>
         <div className="App">
           <Navbar />
           <Switch>
@@ -22,7 +23,6 @@ class App extends Component {
             <Route exact path="/blogs/self-help" component={Help} />
             <Route exact path="/blogs/news" component={News} />
             <Route exact path="/blogs/something" component={Home} />
-            <Route exact path="/signin" component={Home} />
             <Route exact path="/signin" component={Signin} />
             <Route exact path="/signup" component={Signup} />
             {/* <Route exact path="/*" component={ErrorPage} /> */}

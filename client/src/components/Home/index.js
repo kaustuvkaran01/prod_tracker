@@ -23,7 +23,7 @@ const HomeContainer = styled.div`
   flex-direction: row;
   flex-wrap:wrap;
   gap:3rem;
-  margin-top: 6rem;
+  margin-top: 4rem;
   height: 100%;
   width: 100%;
   // height:100vh;

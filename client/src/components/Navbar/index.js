@@ -22,7 +22,7 @@ const NavbarComponent = (props) => {
 
   return (
     <NavbarContainer>
-      <Navbar color="dark" fixed="top" dark expand="md">
+      <Navbar color="light" fixed="top" light expand="md">
         <NavbarBrand href="/home">productivityTracker</NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
@@ -33,7 +33,7 @@ const NavbarComponent = (props) => {
             <NavItem>
               <NavLink href="/">GitHub</NavLink>
             </NavItem>
-            <UncontrolledDropdown nav inNavbar className="dropdown link-text">
+            {/* <UncontrolledDropdown nav inNavbar className="dropdown link-text">
               <DropdownToggle nav caret>
                 Blogs
               </DropdownToggle>
@@ -54,7 +54,7 @@ const NavbarComponent = (props) => {
                   <DropdownItem>Reset</DropdownItem>
                 </NavLink>
               </DropdownMenu>
-            </UncontrolledDropdown>
+            </UncontrolledDropdown> */}
           </Nav>
           <NavbarText style={{ paddingRight: "5rem" }}>User Image</NavbarText>
         </Collapse>

@@ -2,23 +2,45 @@ import React,{ Component } from 'react';
 import styled from 'styled-components';
 import Cards from '../../Card/index';
 import Boxes from '../../Boxes/index';
+import design from '../../../images/design.png';
+// import svg1 from '../../../images/react-svg.svg';
 
+const boxes = [ {
+  heading:'Motivation',
+  subheading:'Your daily dose of motivation',
+  // svg1:'../../../images/react-svg.svg'
+},{
+  heading:'Workout',
+  subheading:'Your daily dose of workout',
+  // svg1:'../../../images/react-svg.svg',
+},{
+  heading:'Latest News',
+  subheading:'Your daily dose of drama',
+  // svg1:'../../../images/react-svg.svg',
+},{
+  heading:'Random',
+  subheading:'Something random to start you off',
+  // svg1:'../../../images/react-svg.svg',
+}]
 class Left extends Component {
   render(){
     return (
       <LeftContainer>
         <div className="quote">
           <p className="quote-text">
-            "START WHERE YOU ARE. USE WHAT YOU HAVE. DO WHAT YOU CAN."
+            "Start where you are, do what you can, use what you have."
           </p>
+          <div className="design">
+            {/* This is where the design comes in */}
+            <img src={design}/>
+          </div>
         </div>
         <div className="boxes">
           <p>Additional Resources</p>
           <div className="boxes-div">
-            <Boxes />
-            <Boxes />
-            <Boxes />
-            <Boxes />
+            {boxes.map(box => {
+              return(<Boxes heading={box.heading} subheading={box.subheading}/>);
+            })}
           </div>
         </div>
       </LeftContainer>
@@ -35,39 +57,42 @@ const LeftContainer = styled.div`
   min-width: 50%;
   border-radius: 24px;
   background: var(--light-blue);
-  height: 80vh;
-  // border: 1px solid var(--border-yellow);
-  align-content:center;
+  height: 90vh;
+  align-items:center;
   justify-content:center;
   .quote {
+    display:flex;
     height: 10rem;
-    width: 80%;
-    // margin: 2.5rem;
-    align-self:center;
+    width: 40rem;
     background: var(--medium-blue);
     border-radius: 24px;
+    align-items:center;
+    justify-content:space-between;
   }
   .quote-text {
-    margin: 1rem 1rem 1rem 1rem;
-    text-align: center;
-    font-size:xX-large;
+    text-align: right;
+    font-size:x-large;
     font-family:'Poppins';
-    color:var(--border-yellow);
+    color:white;
+    width:20rem;
+  }
+  .design img{
+    height:10rem;
+    border-radius:0 24px 24px 0;
   }
   .boxes {
     // margin: 3rem;
     align-self:center;
     margin-top:3rem;
-    // display:flex;
-    // flex-wrap:wrap;
-    // flex-direction:column;
+    display:flex;
+    flex-wrap:wrap;
+    flex-direction:column;
     gap: 2rem;
     background:transparent;
     font-weight:500;
     font-size:x-large;
     color: var(--main-dark);
-    height:50%;
-    width:80%;
+    width:40rem;
     // border: 1px solid var(--border-yellow);
   }
   .boxes-div{
@@ -77,6 +102,5 @@ const LeftContainer = styled.div`
     height:45%;
     gap:2rem;
     justify-content:space-between;
-    // padding:1rem;
   }
 `;
