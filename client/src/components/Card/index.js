@@ -6,19 +6,14 @@ import { IoIosArrowDown,IoIosArrowUp } from 'react-icons/io';
 function Cards(props) {
   return (
     <CardContainer>
-      <img src={icon1} />
-      <p>
-        {props.type}
-        <br />
-        {props.sessions} / {props.totalsessions}
-        <br />
-        <button>
-          <IoIosArrowDown size={50} />
-        </button>
-        <button>
-          <IoIosArrowUp size={50} />
-        </button>
-      </p>
+      <div className="left">
+
+      <p className="heading">Heading
+      <p className="sub-head">Today</p></p>
+      </div>
+      <div className="right">
+        <p className="heading">count</p>
+      </div>
     </CardContainer>
   );
 }
@@ -26,27 +21,26 @@ export default Cards;
 
 const CardContainer = styled.div`
 
-    height:20rem;
-    width: 15rem;
-    border-radius: 24px;
-    background: white;
-    padding: 1.5rem;
-    margin:2rem;
-    background: #0e1111;
-    text-align:center;
-    img{
-        height: 60%;
-        border-radius:50%;
-        border: 10px solid #A521DA;
+    height:7vh;
+    width:80%;
+    // border:1px solid blue;
+    align-self:center;
+    background: var(--light-blue);
+    border-radius: 6px;
+    display:flex;
+    .left{
+      height:90%;
     }
-    p{
-        font-size:x-large;
-        color:white;
+    .right{
+      height:90%;
     }
-    button{
-        background:transparent;
-        border:transparent;
-        color:white;
+    .heading{
+      font-weight:600;
+      font-size:normal;
+    }
+    .sub-head{
+      font-weight:400;
+      font-size:small;
     }
 
 `;

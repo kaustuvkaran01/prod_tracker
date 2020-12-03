@@ -23,7 +23,7 @@ const NavbarComponent = (props) => {
   return (
     <NavbarContainer>
       <Navbar color="dark" fixed="top" dark expand="md">
-        <NavbarBrand href="/">ProductivityTracker</NavbarBrand>
+        <NavbarBrand href="/home">productivityTracker</NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mr-auto" navbar style={{ paddingLeft: "2rem" }}>
