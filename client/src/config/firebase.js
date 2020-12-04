@@ -1,6 +1,5 @@
-import firebase from 'firebase/app';
-import 'firebase/firestore'
-import 'firebase/auth'
+import firebase from 'firebase';
+import 'firebase/firestore';
 
 // Initializing Firebase
 var firebaseConfig = {
@@ -14,8 +13,10 @@ var firebaseConfig = {
     measurementId: "G-F4S19ZMYED"
   };
   // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
+  export const app = firebase.initializeApp(firebaseConfig);
   // firebase.analytics();
-  firebase.firestore().settings({ timestampsInSnapshots: true });
+  // firebase.firestore().settings({ timestampsInSnapshots: true });
 
-  export default firebase;
+  export const auth = firebase.auth();
+  export const db = firebase.firestore();
+  // export const storage = firestore.storage();

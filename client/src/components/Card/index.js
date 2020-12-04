@@ -2,18 +2,35 @@ import React from 'react';
 import styled from 'styled-components';
 import icon1 from '../../images/sleep.webp';
 import { IoIosArrowDown,IoIosArrowUp } from 'react-icons/io';
-
-function Cards(props) {
+import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
+import 'react-circular-progressbar/dist/styles.css';
+function Cards({ user_id,id,name,count }) {
+  const percentage = Math.ceil({count}/30);
   return (
     <CardContainer>
       <div className="left">
-
-      <p className="heading">Heading
-      <p className="sub-head">Today</p></p>
+        <p className="heading">
+          {name}
+          <p className="sub-head">Today</p>
+        </p>
+      </div>
+      <div>
+        <CircularProgressbar
+          value={66}
+          text={`${count}`}
+          styles={buildStyles({
+            textSize: "48px",
+            rotation: 0.25,
+          })}
+        />
       </div>
       <div className="right">
-        <button className="counter-btn"><IoIosArrowUp /></button>
-        <button className="counter-btn"><IoIosArrowDown /></button>
+        <button className="counter-btn">
+          <IoIosArrowUp />
+        </button>
+        <button className="counter-btn">
+          <IoIosArrowDown />
+        </button>
       </div>
     </CardContainer>
   );
@@ -32,7 +49,11 @@ const CardContainer = styled.div`
     align-items:center;
     justify-content:center;
     .left{
-      height:90%;
+      // display:flex;
+      // flex-direction:row;
+      // gap:1rem;
+      width:1rem;
+      justify-content:left;
     }
     .right{
       display:flex;

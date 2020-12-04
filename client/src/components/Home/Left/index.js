@@ -1,5 +1,6 @@
 import React,{ Component } from 'react';
 import styled from 'styled-components';
+import { NavLink } from 'react-router-dom';
 import Cards from '../../Card/index';
 import Boxes from '../../Boxes/index';
 import design from '../../../images/design.png';
@@ -8,19 +9,23 @@ import design from '../../../images/design.png';
 const boxes = [ {
   heading:'Motivation',
   subheading:'Your daily dose of motivation',
+  link:'/motivation'
   // svg1:'../../../images/react-svg.svg'
 },{
   heading:'Workout',
   subheading:'Your daily dose of workout',
   // svg1:'../../../images/react-svg.svg',
+  link:'/workout'
 },{
   heading:'Latest News',
   subheading:'Your daily dose of drama',
   // svg1:'../../../images/react-svg.svg',
+  link:'/news'
 },{
   heading:'Random',
-  subheading:'Something random to start you off',
+  subheading:'Your daily dose of random',
   // svg1:'../../../images/react-svg.svg',
+  link:'/something'
 }]
 class Left extends Component {
   render(){
@@ -39,7 +44,7 @@ class Left extends Component {
           <p>Additional Resources</p>
           <div className="boxes-div">
             {boxes.map(box => {
-              return(<Boxes heading={box.heading} subheading={box.subheading}/>);
+              return(<NavLink to={box.link}><Boxes heading={box.heading} subheading={box.subheading}/></NavLink>);
             })}
           </div>
         </div>

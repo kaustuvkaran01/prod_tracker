@@ -1,0 +1,25 @@
+{
+    "tasks":{
+        "user":{
+            "user_id":"",
+            "tasks":{
+                "0001":{
+                    "task_name":"sleep",
+                    "task_count":"0"
+                },
+                "0002":{
+                    "task_name":"workout",
+                    "task_count":"0"
+                },
+                "0003":{
+                    "task_name":"meditation",
+                    "task_count":"0"
+                },
+                "0004":{
+                    "task_name":"recreation",
+                    "task_count":"0"
+                }
+            }
+        }
+    }
+}

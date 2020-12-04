@@ -1,18 +1,43 @@
-import React from 'react';
+import React,{ useEffect } from 'react';
 // import NavbarComponent from '../Navbar/index';
 import Left from './Left/index';
 import Right from './Right/index';
 import styled from 'styled-components';
+import { auth } from '../../config/firebase';
+import { useHistory } from 'react-router-dom';
 
 function Home() {
+  useEffect(() => {
+    auth.onAuthStateChanged((user) => {
+      if (!user) history.push("/auth");
+    });
+  });
+
+  const history = useHistory();
+
+  const logOut = () =>{
+    auth
+      .signOut()
+      .then((res) => {
+        history.push("/auth");
+        //do something else with res
+      })
+      .catch((err) => {
+        //do something else with err
+      });
+  }
+
   return (
     <HomeContainer>
-        <div className="left">
-          <Left />
-        </div>
-        <div className="right">
-          <Right />
-        </div>
+      <div className="left">
+        <Left />
+      </div>
+      <div className="right">
+        <Right />
+      </div>
+      {/* <div>
+        <button onClick={logOut}>Log out</button>
+      </div> */}
     </HomeContainer>
   );
 }

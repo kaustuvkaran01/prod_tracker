@@ -2,7 +2,7 @@ import React,{ Component } from 'react';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
-export default function WOCards({ heading,subheading}) {
+export default function NewsCards({ heading,subheading}) {
   return (
     <motion.div
           whileHover={{
@@ -11,19 +11,19 @@ export default function WOCards({ heading,subheading}) {
             boxShadow: "0px 0px 8px rgb(210,208,157)",
           }}
         >
-          <WOContainer>
+          <NewsCardContainer>
               <p className="heading">
                 {heading}
                 <p className="sub-head">{subheading} </p>
               </p>
-            <img src={require('../../../images/training.svg')} />
-          </WOContainer>
+            <img src={require('../../../images/news.svg')} />
+          </NewsCardContainer>
         </motion.div>
   );
 }
 
 
-const WOContainer = styled.div`
+const NewsCardContainer = styled.div`
 
     display:flex;
     background:black;
