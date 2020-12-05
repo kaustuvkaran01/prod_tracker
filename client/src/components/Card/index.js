@@ -16,7 +16,7 @@ function Cards({ user_id,id,name,count }) {
       </div>
       <div>
         <CircularProgressbar
-          value={66}
+          value={count}
           text={`${count}`}
           styles={buildStyles({
             textSize: "48px",

@@ -6,29 +6,71 @@ import WOCards from './WorkoutCard/index';
 import { AnimateSharedLayout } from "framer-motion"
 import icon1 from '../../images/sleep.webp';
 
+const workout1 = [
+  {
+    heading:"Medial",
+    subheading:"These exercise will target only the medial head, examples are supinated cable extension"
+  },
+  {
+    heading:"Quads",
+    subheading:"heck squats,squats, leg extensions,lunges, sissy squats"
+  },
+  {
+    heading:"Chest",
+    subheading:"bench press, pushups, diamond pushups, pec Dec fly, svend presses, incline pushups"
+  },
+]
+const workout2 = [
+  {
+    heading:"Short Head",
+    subheading:"Bicep curls are the best exercise for targeted hypertrophy along with supinated chin ups and different types of leans"
+  },
+  {
+    heading:"Forearm",
+    subheading:"behind the back curls, farmer shrugs, hang, one arm active hang, pronation curls, ulnar and lateral curls"
+  },
+  {
+    heading:"Calves",
+    subheading:"seated calf raises, calf raises, single leg calf raises, jump rope"
+  },
+]
+const workout3 = [
+  {
+    heading:"Hamstrings",
+    subheading:"Deadlifts, jefferson curls and hamstring curls are a good option to cause targeted hyper trophy"
+  },
+  {
+    heading:"Glutes",
+    subheading:"Glute Ham Raises, Glute bridge, pistol squats, sumo deadlift for targeted muscular hyper trophy"
+  },
+  {
+    heading:"Back",
+    subheading:"pullups, one arm pullups, commando pullups, chin ups, rows,front lever raises"
+  }
+]
+
 export default function Workout() {
   return (
     <WorkoutContainer>
       <div className="section">
         <h1>Triceps</h1>
-        <WOCards heading="Medial" subheading="These exercise will target only the medial head, examples are supinated cable extension"/>
-        <WOCards heading="Medial" subheading="These exercise will target only the medial head, examples are supinated cable extension"/>
-        <WOCards heading="Medial" subheading="These exercise will target only the medial head, examples are supinated cable extension"/>
-        <WOCards heading="Medial" subheading="These exercise will target only the medial head, examples are supinated cable extension"/>
+        {workout1.map(workout =>{
+          return <WOCards heading={workout.heading} subheading={workout.subheading}/>
+        })}
       </div>
       <div className="section">
         <h1>Biceps</h1>
-        <WOCards heading="Short Head" subheading="Bicep curls are the best exercise for targeted hypertrophy along with supinated chin ups and different types of leans"/>
-        <WOCards heading="Short Head" subheading="Bicep curls are the best exercise for targeted hypertrophy along with supinated chin ups and different types of leans"/>
-        <WOCards heading="Short Head" subheading="Bicep curls are the best exercise for targeted hypertrophy along with supinated chin ups and different types of leans"/>
-        <WOCards heading="Short Head" subheading="Bicep curls are the best exercise for targeted hypertrophy along with supinated chin ups and different types of leans"/>
+        {/* <h1>Triceps</h1> */}
+        {workout2.map(workout =>{
+          return <WOCards heading={workout.heading} subheading={workout.subheading}/>
+        })}
       </div>
       <div className="section">
         <h1>Legs</h1>
-        <WOCards heading="Hamstrings" subheading="Deadlifts, jefferson curls and hamstring curls are a good option to cause targeted hyper trophy"/>
-        <WOCards heading="Hamstrings" subheading="Deadlifts, jefferson curls and hamstring curls are a good option to cause targeted hyper trophy"/>
-        <WOCards heading="Hamstrings" subheading="Deadlifts, jefferson curls and hamstring curls are a good option to cause targeted hyper trophy"/>
-        <WOCards heading="Hamstrings" subheading="Deadlifts, jefferson curls and hamstring curls are a good option to cause targeted hyper trophy"/>
+        {/* <h1>Triceps</h1> */}
+        {workout3.map(workout =>{
+          return <WOCards heading={workout.heading} subheading={workout.subheading}/>
+        })}
       </div>
     </WorkoutContainer>
   );
