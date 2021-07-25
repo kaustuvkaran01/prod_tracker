@@ -1,2 +1,2 @@
 # prod_tracker
-This is a productivity tracker made for our Software Engineering Course
+Productivity Tracker made using React.js and Firebase
